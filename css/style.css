@@ -1,3 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
 body {
-    background-color: rgb(241, 241, 248);
+    background-image: url('../assets/images/background.jpg');
+    background-repeat: no-repeat;
+    
+}
+h1 {
+    font-family: 'Chewy', cursive;
+    font-size: 110px;
+    color: #030303;
+    text-align: center;
+    margin-top: 20px;
+}
+span {
+    background-color: aliceblue;
+}
+.group {
+    margin-top: 40px;
+    /*pointer-events: none;*/
+}
+.question {
+    background-color: #030303;
+    color: rgb(243, 238, 232);
+    height: 50px;
+    
+}
+.answer {
+    background-color: rgb(3, 3, 3);
+    color: rgb(243, 238, 232);
+    height: 50px;
+    
+}
+footer > p {
+    text-align: center;    
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    height: 2.5rem;
+    position: absolute;
+    bottom: 0;
+     
 }
