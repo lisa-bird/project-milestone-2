@@ -2,35 +2,88 @@
 
 body {
     background-image: url('../assets/images/background.jpg');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     
 }
 h1 {
     font-family: 'Chewy', cursive;
-    font-size: 110px;
+    font-size: 80px;
     color: #030303;
     text-align: center;
     margin-top: 20px;
 }
 span {
-    background-color: aliceblue;
+    background-color: #f9fcfc;
+    padding: 0 20px 0 20px;
 }
-.group {
-    margin-top: 40px;
-    /*pointer-events: none;*/
+
+#d-container {
+    background-color: #f9fcfc;
+    padding: 3.1em 1.8em;
+    width: 100vw;
+    height: 55vh;
+    max-width: 37.5em;
+    margin: auto;    
+    border-radius: 0.6em;
 }
-.question {
-    background-color: #030303;
-    color: rgb(243, 238, 232);
+#timer {
+    background-color: lightblue;
+    width: 8em;
+    border-radius: 1.8em;
+    border: #030303 solid 1.5px;
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7em 1.8em;
+}
+#question {
+    font-size: 1em;
+    margin-top: 0.5em;
+    background-color: rgb(237, 230, 98);
+    color: #030303;
+    padding: 0.7em 1.8em;
+    border-radius: 0.3em;
+    
+}
+
+#next-btn {
+    font-size: 1em;
+    margin-top: 1.5em;
+    background-color: palevioletred;
+    color: #f9fcfc;
+    padding: 0.7em 1.8em;
+    border-radius: 0.3em;
+    float: right;
+    
+}
+#start-btn { 
+    
+    margin-top: 1.5em;
+    background-color: rgb(46, 214, 180);
+    color: #151616;
+    padding: 0.7em 1.8em;
+    border-radius: 0.3em;
+    border: #f9fcfc solid 3px;
+}
+/* .btn-que {
+    background-color: #f9fcfc;
+    color: rgb(3, 3, 3);
     height: 50px;
     
 }
 .answer {
     background-color: rgb(3, 3, 3);
-    color: rgb(243, 238, 232);
-    height: 50px;
-    
+    color: #f9fcfc;
+    height: 50px;    
 }
+
+.correct {
+    background: green;
+}
+
+.incorrect {
+    background: red;
+} */
 footer > p {
     text-align: center;    
     font-size: 25px;
@@ -41,3 +94,8 @@ footer > p {
     bottom: 0;
      
 }
+
+/* @media  and (max-width: 768px) {
+
+    
+} */
