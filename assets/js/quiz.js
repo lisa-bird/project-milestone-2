@@ -61,59 +61,62 @@ let quiz = [
     
 ]
 
+ let questionIndex = -1
 
-const nextQuestion = () => {
-const qel = document.getElementById("question")
-
-qel.innerHTML = quiz[0].question
-insertAnswers()
+const nextQuestion = (questionIndex) => {
+    const qel = document.getElementById("question")
+    qel.innerHTML = quiz[questionIndex].question
+    insertAnswers(questionIndex)
 }
 
-const insertAnswers = () => {
-    for (let choice in quiz[0].choices ) {
-        console.log(choice)
-    let el = document.createElement('div')
-    el.classList.add("btn","answer","d-block")
-    //attach correct classes
-    el.innerHTML=quiz[0].choices[choice]
-    const parent = document.getElementById('answer-grid')
-    parent.appendChild(el)
+
+const insertAnswers = (questionIndex) => {
+    const choices = quiz[questionIndex].choices;
+    const container = document.getElementById("contentContainer")
+    const parent = document.getElementById('answer-grid');
+    parent.innerHTML = ""
+ 
+    for (const choice of choices) {
+      const el = document.createElement('div');
+      el.classList.add('btn', 'btn-info', 'answer', 'mt-2', 'd-block');
+      el.innerHTML = choice;
+      parent.appendChild(el);
     }
 
+    container.style.height = `calc(20em +2em*${choices.length})`
+    startTimer(10)
+   
 }
 
-// const insertAnswers = (questionIndex) => {
-//     const choices = quiz[questionIndex].choices;
-//     const parent = document.getElementById('answer-grid');
-  
-//     for (const choice of choices) {
-//       const el = document.createElement('div');
-//       el.classList.add('btn', 'answer', 'd-block');
-//       el.innerHTML = choice;
-//       parent.appendChild(el);
-//     }
-// }
-// //     for (let i = 0; i < quiz.length; i++) {
-//                 insertAnswers(i);
-//     };
-//   }
+const timerElement = document.getElementById('timerValue')
 
-  
+const startTimer =  (n) => { 
+    let remaining = n
+    const myInterval = setInterval(
+        () => {
+            timerElement.innerHTML = remaining;
+        
+            if (remaining <= 0)
+            {
+                clearInterval(myInterval)    
+            }
+            remaining -= 1
+        },1000)
+}
+const nextQuestionHandler = () => {
+    questionIndex += 1
+    if (questionIndex>=quiz.length)
+    {
+            alert('Game Over')
+    }
+    nextQuestion(questionIndex)
 
-function timer () {
-    setInterval(function() {
-        date = new Date();
-        let time = date.getSeconds();
-        document.getElementById('timer').innerHTML = time;
-        console.log(timer);
-    }, 1000);
 }
 
+const startQuizHandler = () => {
+    questionIndex = -1
+    nextQuestionHandler()
+}
 
-// const displayQuiz = document.getElementById("display");
-// let time = document.querySelector(".timer");
-// let quizContainer = document.getElementById("d-container");
-// let nextBtn = document.getElementById("next-btn");
-// let displayCont = document.getElementById("q-container")
 
 
