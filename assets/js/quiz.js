@@ -92,55 +92,86 @@ const insertAnswers = (questionIndex) => {
     startTimer(10)   
 }
 
+
+
 const answerClickHandler = (e) => {
+    const clickedElement = e.target;
+    
     for (const el of answerElements) {
-        if (el.getAttribute("data-correct") == "true") {
-            el.style.backgroundColor = "#98F790 ";
+      el.removeEventListener("click", answerClickHandler); // Remove event listener
+  
+      if (el.getAttribute("data-correct") === "true") {
+        el.style.backgroundColor = "#98F790 ";
+  
+        if (el === clickedElement) {
+          const feedbackElement = document.createElement("p");
+          feedbackElement.innerText = "That's correct!";
+          feedbackElement.style.color = "white";
+          el.appendChild(feedbackElement);
+          incrementScore();
 
-            if (e.srcElement === el) {
-                const feedbackElement = document.createElement("p");
-                feedbackElement.innerText = "That's correct!";
-                feedbackElement.style.color = "white";
-                el.appendChild(feedbackElement);
-            }
-        } else {
-            el.style.backgroundColor = "#FCAEA4";
-
-            if (e.srcElement === el) {
-                const feedbackElement = document.createElement("p");
-                feedbackElement.innerText = "That's incorrect!";
-                feedbackElement.style.color = "white";
-                el.appendChild(feedbackElement);
-            }
+          clearInterval(timerInterval); 
+          return; 
         }
-    }
-};
+      } else {
+        el.style.backgroundColor = "#FCAEA4";
+  
+        if (el === clickedElement) {
+          const feedbackElement = document.createElement("p");
+          feedbackElement.innerText = "That's incorrect!";
+          feedbackElement.style.color = "white";
+          el.appendChild(feedbackElement);
+          incrementIncorrectScore();
 
+          clearInterval(timerInterval); 
+          
+        }
+      }
+    }
+  };
+  
+
+function incrementScore () {
+    let oldScore = (document.getElementById("score").textContent);
+    document.getElementById("score").textContent = ++oldScore;
+}
+
+function incrementIncorrectScore () {
+    let oldScore = (document.getElementById("incorrect").textContent);
+    document.getElementById("incorrect").textContent = ++oldScore;
+}
 
 
 const timerElement = document.getElementById('timerValue')
 
-const startTimer =  (n) => { 
-    let remaining = n
-    const myInterval = setInterval(
-        () => {
-            timerElement.innerHTML = remaining;
-        
-            if (remaining <= 0)
-            {
-                clearInterval(myInterval)
-                alert('Out of time!!')
-                                  
-            }
-            remaining -= 1
-        },1000)
-}
+
+
+let timerInterval; 
+
+const startTimer = (n) => {
+  let remaining = n;
+  timerElement.innerHTML = remaining;
+
+  clearInterval(timerInterval); 
+
+  timerInterval = setInterval(() => {
+    timerElement.innerHTML = remaining;
+
+    if (remaining <= 0) {
+      clearInterval(timerInterval);
+      alert("Out of time!");
+    }
+    remaining -= 1;
+  }, 1000);
+};
+
 
 const nextQuestionHandler = () => {
     questionIndex += 1
     if (questionIndex>=quiz.length)
     {
             alert('Game Over')
+            
     }
     nextQuestion(questionIndex)
 }
@@ -148,6 +179,8 @@ const nextQuestionHandler = () => {
 const startQuizHandler = () => {
     questionIndex = -1
     nextQuestionHandler()
+    document.getElementById("score").textContent = "0";
+
 }
 
 
