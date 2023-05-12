@@ -33,7 +33,7 @@ h1>span {
 }
 
 #question {
-    background-color: rgb(237, 230, 98);
+    background-color: rgb(254, 228, 83);
     color: #030303;
     padding: 1em;
     border-radius: 0.3em;  
@@ -53,6 +53,9 @@ h1>span {
     padding: 0.7em 1.8em;
     border-radius: 0.3em;
     border: #f9fcfc solid 3px;
+}
+div > btn {
+    background-color: #6DF6E0;
 }
 
 footer > p {
