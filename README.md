@@ -31,6 +31,10 @@ The information displayed on the website is structured in a logical way. The lan
 In gameplay the container holds the questions and answers, with a visible timer counting down 10 seconds. The 'next' button is easily seen to the right of the container. Towards the bottom of the container the score board is displayed, again keeping the colours consisitent throughout the quiz.
 ## The Skeleton
 The entire quiz is a single page of HTML, making use of the display elemnet to change between the instructions and the content container.
+
+[Wire Frames](https://www.figma.com/file/6v5uI3eQwyMpaT7VljDYJ1/Mobile-%2B-Tablet-%2B-Browser-Templates-(Community)?type=design&node-id=3%3A114&t=hXE7aUpXJi6QkzUR-1)
+
+![Flow chart](/assets/images/flow-chart.jpg)
 ## The Surface
 Keeping with the 90s vibe I wanted to use a bubble style font for the main heading but also making sure it was readable on the site. For the body of text I opted for a simple sans serif font 'Work Sans'.  
 
@@ -55,6 +59,25 @@ To help me create this website I used these technologies:
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator)
 
 # Testing
+Tests are used in web development to ensure the code works as expected.
+### The principles of automated testing are
+* Testing is performed using different automation tools, such as Jest.
+* These tests are usually written by the programmer while the project is being developed, meaning errors will be picked up promptly
+* It is often quicker to use. Hundreds of tests can be run against a project in a short amount of time.
+* These tests are used for repetitive tasks.
+* Tests can be written for very specific cases.
+* Tests should improve quality
+* Automated tests help you understand the code.
+### Manual testing:
+* Testing is performed manually by humans.
+* This form of testing is effective for evaluating the usability and intuitiveness of the UI. Testers can provide feedback based on their experience.
+* This form of testing can take longer than automated.
+* As with automated testing, manual testing can be used for very specific cases, where testers may need to improvise and stimulate user interactions.
+* Manual testing allows testers to gather direct feedback from end users during the testing process, which can help improve the UX.
+
+Testing should be deployed thoughout the entire  project, rather than a one-time event. This will help ensure the quality, stability and usabilty of the web development.
+
+
 
 # User Stories
 ## User - 1
