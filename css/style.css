@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Wix+Madefor+Text:wght@500&display=swap');
 
 body {
     background-image: url('../assets/images/background.jpg');
-    background-repeat: repeat;    
+    background-repeat: repeat; 
+    font-family:'Wix Madefor Text', sans-serif;
+    ;   
 }
 
 h1 {
