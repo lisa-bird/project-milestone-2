@@ -22,6 +22,24 @@
             <button onclick="startQuizHandler()" class="start-btn-zz col-2 offset-5"><i class="fa-regular fa-circle-play"></i> Start</button>
        </div>
     </div>
+<!-- Instructions -->
+    <div class="instructions" id="instructions"> 
+      <h2>Instructions</h2>
+        <p>Welcome to the 90's Trivia Quiz! Test your knowledge of the 90s with these 10 questions.</p>
+          <ol>
+            <li>You will have 10 seconds to answer each question. If you don't answer within the time limit, you will be alerted if you are out of time.</li>
+            <li>To start the quiz, click the "Start" button.</li>
+            <li>Once the quiz starts, a question will appear on the screen along with multiple answer choices.</li>
+            <li>Read the question carefully and click on the answer choice you think is correct.</li>
+            <li>If you select the correct answer within the time limit, the answer button will turn green and you will earn a point.</li>
+            <li>If you select the incorrect answer within the time limit, the answer button will turn red.</li>
+            <li>After making a selection, you will see a feedback message indicating whether your answer was correct or incorrect.</li>
+            <li>To move on to the next question, click the "Next" button.</li>
+            <li>The quiz will continue until you have answered all 10 questions. At the end, you will see your total score displayed.</li>
+          </ol>
+          Enjoy the quiz and test your knowledge of the awesome 90s era!
+        </div> 
+
 <!-- Display container -->
    <div id="contentContainer" class="container mt-2">
      <!-- Displays question -->
@@ -42,11 +60,11 @@
         <div class="offset-9 col-2">         
           <button onclick="nextQuestionHandler()" class="next-btn-zz">Next</button>
         </div>
-      </div>
-
+      </div>  
+     <!-- Score board -->
       <div class="score">
-        <p class="scores">Correct<span id="score">0</span></p>
-        <p class="scores">Incorrect<span id="incorrect">0</span></p>
+        <p class="scores">Correct <span id="score">0</span></p>
+        <p class="scores">Incorrect <span id="incorrect">0</span></p>
       </div>
     </div>
 

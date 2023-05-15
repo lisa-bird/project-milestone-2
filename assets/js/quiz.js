@@ -1,3 +1,4 @@
+// Questions and answers
 let quiz = [
     { 
         "question":"Which popular sitcom aired from 1994 to 2004 and followed the lives of six friends living in New York City?",
@@ -37,7 +38,7 @@ let quiz = [
 
     { 
         "question":"Which iconic 90s sitcom featured Will Smith as a street-smart teenager who is sent to live with his wealthy aunt and uncle in their Bel Air mansion?",
-        "choices":["Full House", "The Fresh Prince of Bel-Air", "Family Matters", "Boy Meets World" ],
+        "choices":["Full House", "The Fresh Prince of Bel-Air", "Family Matters", "Boy Meets World"],
         "correctAnswer":"The Fresh Prince of Bel-Air"
     },
 
@@ -49,32 +50,34 @@ let quiz = [
 
     { 
         "question":"What was the name of the popular TV show that followed the lives of a group of high school students in California, which aired from 1990 to 2000?",
-        "choices":["Beverly Hills, 90210", " Saved by the Bell", "Dawson's Creek", "Party of Five"],
+        "choices":["Beverly Hills, 90210", "Saved by the Bell", "Dawson's Creek", "Party of Five"],
         "correctAnswer":"Beverly Hills, 90210"
     },
 
     { 
         "question":"Which pop diva sang the iconic song 'Baby One More Time' which became a hit in 1998?",
-        "choices":[" Christina Aguilera", " Britney Spears", "Madonna", "Mariah Carey"],
+        "choices":["Christina Aguilera", "Britney Spears", "Madonna", "Mariah Carey"],
         "correctAnswer":"Britney Spears"
-    },
-    
+    },    
 ]
 
  let questionIndex = -1
  let answerElements = []
 
-const nextQuestion = (questionIndex) => {
+// Function to display the next question
+ const nextQuestion = (questionIndex) => {
     const qel = document.getElementById("question")
     qel.innerHTML = quiz[questionIndex].question
     insertAnswers(questionIndex)
 }
 
+//Function to insert answer choices for each question
 const insertAnswers = (questionIndex) => {
     const choices = quiz[questionIndex].choices;
     const correctAnswer = quiz[questionIndex].correctAnswer;
     const container = document.getElementById("contentContainer")
     const parent = document.getElementById('answer-grid');
+   
     parent.innerHTML = ""
     answerElements = []
 
@@ -92,8 +95,7 @@ const insertAnswers = (questionIndex) => {
     startTimer(10)   
 }
 
-
-
+//Function to handle the click event on an answer
 const answerClickHandler = (e) => {
     const clickedElement = e.target;
     
@@ -101,7 +103,7 @@ const answerClickHandler = (e) => {
       el.removeEventListener("click", answerClickHandler); // Remove event listener
   
       if (el.getAttribute("data-correct") === "true") {
-        el.style.backgroundColor = "#98F790 ";
+        el.style.backgroundColor = "#98f790";
   
         if (el === clickedElement) {
           const feedbackElement = document.createElement("p");
@@ -114,7 +116,7 @@ const answerClickHandler = (e) => {
           return; 
         }
       } else {
-        el.style.backgroundColor = "#FCAEA4";
+          el.style.backgroundColor = "#fcaea4";
   
         if (el === clickedElement) {
           const feedbackElement = document.createElement("p");
@@ -130,24 +132,22 @@ const answerClickHandler = (e) => {
     }
   };
   
-
+// Function to increment the score when answer is correct
 function incrementScore () {
     let oldScore = (document.getElementById("score").textContent);
     document.getElementById("score").textContent = ++oldScore;
 }
 
+// Function to increment the score when answer is incorrect
 function incrementIncorrectScore () {
     let oldScore = (document.getElementById("incorrect").textContent);
     document.getElementById("incorrect").textContent = ++oldScore;
 }
 
-
 const timerElement = document.getElementById('timerValue')
-
-
-
 let timerInterval; 
 
+// Function to start the timer
 const startTimer = (n) => {
   let remaining = n;
   timerElement.innerHTML = remaining;
@@ -159,13 +159,19 @@ const startTimer = (n) => {
 
     if (remaining <= 0) {
       clearInterval(timerInterval);
-      alert("Out of time!");
+
+      if (questionIndex < quiz.length - 1) {
+        alert("Out of time!");
+        nextQuestionHandler();
+      } else {
+        alert("Game Over!");
+      }
     }
     remaining -= 1;
   }, 1000);
 };
 
-
+// Next question button
 const nextQuestionHandler = () => {
     questionIndex += 1
     if (questionIndex>=quiz.length)
@@ -176,9 +182,17 @@ const nextQuestionHandler = () => {
     nextQuestion(questionIndex)
 }
 
+// Start question button
 const startQuizHandler = () => {
     questionIndex = -1
     nextQuestionHandler()
+
+    const container = document.getElementById("contentContainer");
+    container.style.display = "block";   
+    
+    const instruction = document.getElementById("instructions");
+    instruction.style.display = "none";
+
     document.getElementById("score").textContent = "0";
 
 }

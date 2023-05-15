@@ -2,9 +2,9 @@
 
 body {
     background-image: url('../assets/images/background.jpg');
-    background-repeat: repeat;
-    
+    background-repeat: repeat;    
 }
+
 h1 {
     font-family: 'Chewy', cursive;
     font-size: 80px;
@@ -17,6 +17,17 @@ h1>span {
     padding: 0 20px 0 20px;
 }
 
+.instructions {
+    display: block;
+    background-color: #f9fcfc;
+    padding: 2em;
+    width: 75%;
+    min-height: 50vh;
+    margin: auto;    
+    border-radius: 0.6em;
+    margin-top: 0.5em;
+}
+
 #contentContainer {
     background-color: #f9fcfc;
     padding: 2em;
@@ -24,7 +35,9 @@ h1>span {
     min-height: 50vh;
     margin: auto;    
     border-radius: 0.6em;
+    display: none;
 }
+
 #timer {
     background-color: lightblue;
     border-radius: 1.8em;
@@ -54,6 +67,31 @@ h1>span {
     border-radius: 0.3em;
     border: #f9fcfc solid 3px;
 }
+.score {
+    background-color: rgb(111, 125, 248);
+    color: #030303;
+    text-align: center;
+    border-radius: 0.3em; 
+    margin: 5px auto; 
+    font-weight: bold;
+    width: 40%;
+    border: solid rgb(24, 24, 24) 1.5px;
+
+}
+.scores {
+    display: inline-block;
+    margin-top: 5px;
+}
+#score {
+    color: rgb(99, 227, 99);
+    font-weight: bold;
+}
+
+#incorrect {
+    color: rgb(251, 159, 159);
+    font-weight: bold;
+}
+
 div > btn {
     background-color: #6DF6E0;
 }
