@@ -67,7 +67,7 @@ let quiz = [
 // Function to display the next question
  const nextQuestion = (questionIndex) => {
     const qel = document.getElementById("question")
-    qel.innerHTML = quiz[questionIndex].question
+    qel.innerHTML = quiz[questionIndex].question;
     insertAnswers(questionIndex)
 }
 
@@ -160,12 +160,12 @@ const startTimer = (n) => {
     if (remaining <= 0) {
       clearInterval(timerInterval);
 
-      if (questionIndex < quiz.length - 1) {
-        alert("Out of time!");
-        nextQuestionHandler();
-      } else {
-        alert("Game Over!");
-      }
+      // if (questionIndex < quiz.length - 1) {
+      //   alert("Out of time!");
+      //   nextQuestionHandler();
+      // } else {
+      //   alert("Game Over!");
+      // }
     }
     remaining -= 1;
   }, 1000);
