@@ -34,7 +34,7 @@ The entire quiz is a single page of HTML, making use of the display elemnet to c
 
 [Wire Frames](https://www.figma.com/file/6v5uI3eQwyMpaT7VljDYJ1/Mobile-%2B-Tablet-%2B-Browser-Templates-(Community)?type=design&node-id=3%3A114&t=hXE7aUpXJi6QkzUR-1)
 
-![Flow chart](/assets/images/flow-chart.jpg)
+
 ## The Surface
 Keeping with the 90s vibe I wanted to use a bubble style font for the main heading but also making sure it was readable on the site. For the body of text I opted for a simple sans serif font 'Work Sans'.  
 
@@ -76,6 +76,8 @@ Tests are used in web development to ensure the code works as expected.
 * Manual testing allows testers to gather direct feedback from end users during the testing process, which can help improve the UX.
 
 Testing should be deployed thoughout the entire  project, rather than a one-time event. This will help ensure the quality, stability and usabilty of the web development.
+
+# Manual testing for my project.
 
 
 

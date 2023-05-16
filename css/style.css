@@ -40,10 +40,8 @@ h1>span {
 }
 /* Timer */
 #timer {
-    background-color: lightblue;
-    border-radius: 1.8em;
-    border: #030303 solid 1.5px;
-    padding: 0.7em 1.8em;
+    background-color: lightblue;    
+    padding: 0.5em 1.8em;
 }
 /* Question */
 #question {
@@ -69,23 +67,22 @@ h1>span {
     border: #f9fcfc solid 3px;
 }
 /* Score area */
-.score {
-    background-color: rgb(111, 125, 248);
-    color: #030303;
+.top-button-style, .score, #timer {
     text-align: center;
     border-radius: 0.3em; 
-    margin: 5px auto; 
     font-weight: bold;
-    width: 40%;
     border: solid rgb(24, 24, 24) 1.5px;
-
+}
+.score {
+    background-color: rgb(132, 145, 247);
+    color: #030303;
 }
 .scores {
     display: inline-block;
     margin-top: 5px;
 }
 #score {
-    color: rgb(99, 227, 99);
+    color: rgb(58, 241, 58);
     font-weight: bold;
 }
 
@@ -120,13 +117,7 @@ footer > p {
     }
 }
 @media (max-width: 414px) {
-    /* .next-btn-zz {
-        text-align: center;
-        margin: auto;        
-        margin-left: auto;
-        margin-right: auto;
-    } */
-    #timer {
+       #timer {
         margin-right: auto;
         position: relative;
         border-radius: 0.6em;

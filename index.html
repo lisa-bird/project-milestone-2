@@ -16,12 +16,14 @@
     <header>
       <h1><span>90's Trivia Quiz</span></h1>
     </header>
+
 <!-- Start button -->
     <div id="controlContainer" class="container">
         <div class="row">
             <button onclick="startQuizHandler()" class="start-btn-zz col-2 offset-5"><i class="fa-regular fa-circle-play"></i> Start</button>
        </div>
     </div>
+
 <!-- Instructions -->
     <div class="instructions" id="instructions"> 
       <h2>Instructions</h2>
@@ -42,18 +44,26 @@
 
 <!-- Display container -->
    <div id="contentContainer" class="container mt-2">
-     <!-- Displays question -->
+     
+    <!-- Displays question -->
       <div class="mt-2 row">
         <button id="question">Question</button>
       </div>
-     <!-- Timer -->
+     
+      <!-- Timer -->
       <div class="mt-2 row">
         <div class="col-2" id="timer">
           <i class="fa-solid fa-stopwatch"></i>
            <span id="timerValue">10</span>s
         </div>
+      <!-- Score board --> 
+        <div class="score offset-6 col-4">
+          <p class="scores">Correct <span id="score">0</span>
+          Incorrect <span id="incorrect">0</span></p>
+        </div>
       </div>
-     <!--Answers get inserted here by click handler-->
+     
+      <!--Answers get inserted here by click handler-->
       <div class="mt-2 row col-8 offset-2" id="answer-grid"></div>
      
       <!-- Move onto next question -->
@@ -61,14 +71,7 @@
         <div class="offset-xxl-9 col-xxl-2 offset-5 col-2">         
           <button onclick="nextQuestionHandler()" class="next-btn-zz">Next</button>
         </div>
-      </div>  
-
-     <!-- Score board -->
-     <div class="row">
-      <div class="score">
-        <p class="scores">Correct <span id="score">0</span></p>
-        <p class="scores">Incorrect <span id="incorrect">0</span></p>
-      </div>
+      </div>       
     </div>
     
     <footer>
