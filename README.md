@@ -3,19 +3,20 @@
 The second milestone project calls for an interactive front-end website. The website will need to respond to the users actions, allowing users to actively engage with data and alter the way the website diplays the information to achieve their preferred goals.
 
 # Owners Goal
-To encourage fun and test users knowledge and memory about the 90s era.
+To encourage fun and test the users knowledge and memory about the 90s era.
 
 # Audience
 
-The audience will be both male and female, aged 25 and over. Groups/ teams can battle it out to get be the winner, with the most points. 
+The audience will be both male and female, aged 25 and over. Groups/ teams can battle it out, to be the winner with the most points. 
 
 # UX
 ## The Strategy
-Business goals include gaining traffic to the website. Ultimately, for the user to find the quiz enjoyable and fun. Whether that be to test their own knowledge of the 90's or to flare up their competitive streak with friends/family, to see who gets the highest score. To capture the attention of the audience the website has:
+Business goals include gaining traffic to the website. Ultimately, for the user to find the quiz enjoyable and fun. Whether that be to test their own knowledge of the 90's or to flare up their competitive streak with friends/family, to see who gets the highest score. 
+To capture the attention of the audience the website has:
 * Easy to use game play.
 * Instructions of how to play.
 * A score board, showing correct and incorrect scores.
-* Bright consistent colours with a 90's garish theme.
+* Bright consistent colours, with a 90's garish theme.
 ## The Scope
 To achieve an interaction, allowing users to actively engage with the data displayed the website includes:
 * Call to action 'Start' button, displays the multiple choice questions.
@@ -34,11 +35,13 @@ The entire quiz is a single page of HTML, making use of the display elemnet to c
 
 [Wire Frames](https://www.figma.com/file/6v5uI3eQwyMpaT7VljDYJ1/Mobile-%2B-Tablet-%2B-Browser-Templates-(Community)?type=design&node-id=3%3A114&t=hXE7aUpXJi6QkzUR-1)
 
+[Flow Chart](/assets/images/flow-chart1.jpg)
 
 ## The Surface
 Keeping with the 90s vibe I wanted to use a bubble style font for the main heading but also making sure it was readable on the site. For the body of text I opted for a simple sans serif font 'Work Sans'.  
 
 ![Heading Font](/assets/images/font2.jpg)
+
 ![Body Font](/assets/images/font1.jpg)
 
  The colours are consistent throughout the quiz, taking inspiration from the 90s style background.  
@@ -61,6 +64,7 @@ To help me create this website I used these technologies:
 - [Github](https://github.com/)
 - [W3C Markup Validation Service](https://validator.w3.org/)
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator)
+- [JSlint](https://www.jslint.com/)
 
 # Testing
 Tests are used in web development to ensure the code works as expected.
@@ -70,7 +74,7 @@ Tests are used in web development to ensure the code works as expected.
 * It is often quicker to use. Hundreds of tests can be run against a project in a short amount of time.
 * These tests are used for repetitive tasks.
 * Tests can be written for very specific cases.
-* Tests should improve quality
+* Tests should improve quality.
 * Automated tests help you understand the code.
 ### Manual testing:
 * Testing is performed manually by humans.
@@ -79,7 +83,7 @@ Tests are used in web development to ensure the code works as expected.
 * As with automated testing, manual testing can be used for very specific cases, where testers may need to improvise and stimulate user interactions.
 * Manual testing allows testers to gather direct feedback from end users during the testing process, which can help improve the UX.
 
-Testing should be deployed thoughout the entire  project, rather than a one-time event. This will help ensure the quality, stability and usabilty of the web development.
+Testing should be deployed thoughout the entire project, rather than a one-time event. This will help ensure the quality, stability and usabilty of the web development.
 
 # Manual testing for my project.
 I have used manual testing, as my project has only two simple, event-driven functions.
@@ -89,7 +93,7 @@ Also deciding that the score-board is more visually appealing in the same row as
 
 Both of these decisions improve the UX for the end-user.
 
-Further testing
+![Further testing](/assets/images/further-testing.jpg)
 
 # User Stories
 ## User - 1
@@ -118,6 +122,17 @@ First time visitor wants to know what happens if they do not answer within the t
 
 ![Time out](/assets/images/user-5.jpg)
 
+# Validation
+CSS 
+![CSS](/assets/images/css-valid.jpg)
+ 
+HTML
+![HTML](/assets/images/html-valid.jpg)
+JSlint
+![JSlint](/assets/images/jslint-a.jpg)
+
+![JSlint](/assets/images/jslint-b.jpg)
+
 # Deployment
 
 This website is deployed using Github. This can be done by  following these stages.
@@ -129,4 +144,4 @@ This website is deployed using Github. This can be done by  following these stag
 6.  Under the 'Branch' section, select Branch drop-down menu and select main.
 7.  Click ***Save***.
 
-![Deployment](/assets/images/deploy.jpg)
+![Deployment](/assets/images/deploy1.jpg)
