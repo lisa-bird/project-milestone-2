@@ -48,7 +48,8 @@ h1>span {
     background-color: rgb(246, 232, 155);
     color: #030303;
     padding: 1em;
-    border-radius: 0.3em;  
+    border-radius: 0.3em;
+    border:#030303 2px solid;  
 }
 /* Next button */
 .next-btn-zz {
