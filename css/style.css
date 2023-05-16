@@ -116,10 +116,12 @@ footer > p {
         border-radius: 0.6em;
     }
 }
-@media (max-width: 414px) {
-       #timer {
-        margin-right: auto;
-        position: relative;
-        border-radius: 0.6em;
+@media (max-width: 414px) {     
+    top-button-style, .score, #timer {
+        text-align: center;
+        border-radius: 0.3em; 
+        font-weight: bold;
+        margin: auto;
+        border: solid rgb(24, 24, 24) 1.5px;
     }
 }

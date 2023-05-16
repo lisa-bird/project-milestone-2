@@ -45,6 +45,10 @@ Keeping with the 90s vibe I wanted to use a bubble style font for the main headi
 
 ![Colour Palette](/assets/images/colours.jpg)
 
+# Features left to implement
+
+* In this version I have used alert pop up boxes. These should be replaced with dialog modal boxes, to give an option to end game or restart game. Having the dialog boxes would make a better UX design. Time constraints have prevented me from developing these. I may add these in the future.
+
 # Technologies Used
 To help me create this website I used these technologies:
 
@@ -78,8 +82,14 @@ Tests are used in web development to ensure the code works as expected.
 Testing should be deployed thoughout the entire  project, rather than a one-time event. This will help ensure the quality, stability and usabilty of the web development.
 
 # Manual testing for my project.
+I have used manual testing, as my project has only two simple, event-driven functions.
 
+As a result of testing, I decided to move the 'Next' button to the center of the container for desktop and laptop devices. With this change the wire frame does not match the end result.
+Also deciding that the score-board is more visually appealing in the same row as the timer.
 
+Both of these decisions improve the UX for the end-user.
+
+Further testing
 
 # User Stories
 ## User - 1
